@@ -10,7 +10,7 @@ body {
    justify-content: center;
    align-items: center;
    min-height: 100vh;
-   background: url('background3.jpg') no-repeat;
+   background: url('background.jpg') no-repeat;
    background-size: cover;
    background-position: center;
 }
@@ -21,7 +21,6 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background: #796262;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,3 +80,29 @@ header {
     background: #fff;
     color: #162938;
 }
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
