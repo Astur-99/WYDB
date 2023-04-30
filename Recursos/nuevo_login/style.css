@@ -255,3 +255,32 @@ header {
     text-decoration: underline;
 }
 
+.info-box {
+    position: relative;
+    width: 1200px;
+    height: 600px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -15%;
+}
+
+.info-box h2 {
+    margin-top: -40%;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.info-box p {
+    color: rgb(251, 255, 255);
+   position: absolute;
+   font-family: 'Poppins';
+   font-size: 115%;
+   text-align: center;
+   }
