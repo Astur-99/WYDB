@@ -57,7 +57,7 @@ if (!$resultado) {
     die("Error al insertar los datos: " . mysqli_error($connection));
 } else {
     // Redireccionar a "welcome.html"
-    header("Location: ../html/welcome.html");
+    header("Location: welcome.php");
     exit(); // Asegurarse de que el script se detenga después de la redirección
 }
 

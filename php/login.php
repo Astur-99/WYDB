@@ -46,7 +46,7 @@ if (!$result) {
 if (mysqli_num_rows($result) > 0) {
     // Inicio de sesión exitoso
     echo "¡Inicio de sesión exitoso!";
-    header("Location: ../html/welcome.html");
+    header("Location: welcome.php");
 } else {
     // Credenciales incorrectas
     echo "ERROR# Las credenciales de inicio de sesión son incorrectas.";

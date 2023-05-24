@@ -1,6 +1,8 @@
 <?php
-  $directorio = '/var/www/html/pelis';
+  $directorio = '../pelis';
   $archivos = scandir($directorio);
+
+  echo  "hola";
 
   foreach ($archivos as $archivo) {
     if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4') {

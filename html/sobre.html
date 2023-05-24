@@ -18,7 +18,7 @@
             <a href="sobre.html">Sobre</a>
             <a href="#">Servicios</a>
             <a href="#">Contacto</a>
-            <button class="btnLogin-popup">Login</button>
+            <!– <button class="btnLogin-popup">Login</button> –>
         </nav>
     </header>
 
@@ -101,14 +101,26 @@
 
         <p>"Writed & Directed By" es el proyecto de final de grado de Juan Carlos Fernández González.
             <br><br>
-            El objetivo de este proyecto es el desarrollo al completo de un ecosistema en red para el amacenado y visualización de películas.
-            El proyecto surje de las ganas que llevaba queriendo desarrollar algo asi, por lo que, con cuestión de tiempo, quebraderos, tutoriales 
-            y muucho ChatGPT estoy consiguiendo desarrollar un ecosistema completo bastante competente, esta estructura de servicio consta de dos partes 
-            bien diferenciadas, un servidor Web, que es donde estás ahora mismo leyendo esto y un servidor de Bases de Datos, este primer servidor Web está 
-            basado en Ubuntu Server 22.04 el cual tiene montado un servidor Apache2, la estética está desarrollada con HTML, CSS y JavaScript, lo cual no ha sido fácil
-            ya que nunca en mi vida habia hecho nada relacionado con JS, aunque haciendo uso del práctico ensayo/error he conseguido que quede un FrontEnd bastante competente.<br><br>
             
-            Así que veremos que rumbo coje el proyecto, por ahora hasta aquí puedo leer.</p>
+            El objetivo de este proyecto es el desarrollo al completo de un directorio en red para el amacenado y visualización de películas<br>
+            todo administrado por un sistema de login y register a través de una base de datos.<br><br>
+            El proyecto surje de las ganas que tenía de desarrollar un directorio donde pudiese tener mi propia versión de Netflix, o HBO, por lo que<br>
+            con tiempo, quebraderos, tutoriales y muucho ChatGPT he desarrollado un ecosistema completo bastante competente y los más importante<br>
+            ¡CON 0 PLANTILLAS!<br>
+            Redactando cada linea a mano, con mucho mimo y artesanía.<br><br>
+            
+            Esta estructura de servicio consta de dos Servidores:<br><br>
+           <i><b>- Servidor Web</b></i><br>
+            Donde estás ahora mismo leyendo esto, una máquina Ubuntu Server 22.04 con Apache2 (2.4.52) el cual tiene montada una estructura completa<br>
+            de directorios donde se almacenan todos los ficheros necesarios. Este proyecto usa para el FrontEnd: HTML5, CSS, JS y PHP, este último es<br>
+            necesario para la conexión con el segundo servidor, que es el...<br><br>
+            
+            <i><b>- Servidor BBDD</b></i><br>
+            Donde se consultan, procesan y almacenan todos los datos de usuarios y/o películas del entorno, este servidor también está montado sobre Ubuntu Server 22.04<br>
+            el cual tiene instalada una Base de Datos MySQL, con la que, haciendo uso de dos tablas llamadas <i>usuarios</i> y <i>peliculas</i>, se consulta y administra<br>
+            todo lo relacionado con el tratamiento de datos ya sea de las películas o de los usuarios que se registren y accedan a la plataforma.<br>
+            
+            Toda la información y código de este proyecto puede ser consultado en mi <a href="https://github.com/JuanCAPlos/WYDB.git">GitHub</a></p>
     </div>
 
         <script src="../js/script.js"></script>
