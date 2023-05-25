@@ -2,13 +2,11 @@
 <html lang="en">
     
 <head>
-    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writed & Directed By</title>
-    <link rel="stylesheet" href="css/style_index.css">
-    
+    <link rel="stylesheet" href="../css/style_contacto.css">
 </head>
 
 <body>
@@ -16,11 +14,11 @@
     <header>
         <h2 class="logo">Writed & Directed By</h2>
         <nav class="navigation">
-            <a href="index.html">Inicio</a>
-            <a href="html/sobre.html">Sobre</a>
-            <a href="html/servicios.html">Servicios</a>
-            <a href="html/contacto.html">Contacto</a>
-            <button class="btnLogin-popup">Login</button>
+            <a href="../index.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <!– <button class="btnLogin-popup">Login</button> –>
         </nav>
     </header>
 
@@ -31,19 +29,19 @@
 
         <div class="form-box Login">
             <h2>Login</h2>
-            <form action="php/login.php" method="POST">
+            <form action="../php/login.php" method="POST">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" name="email_log" required>
+                    <input type="email_log" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                           <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" name="password_log" required>
+                    <input type="password_log" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -60,7 +58,7 @@
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="php/registro.php" name="" method="POST">
+            <form action="../php/registro.php" method="POST">
 
                 <div class="input-box">
                     <span class="icon">
@@ -74,7 +72,7 @@
                     <span class="icon">
                         <ion-icon name="mail"></ion-icon>
                     </span>
-                    <input type="email" name="email_reg" required>
+                    <input type="email" required>
                     <label>Email</label>
                 </div>
 
@@ -97,7 +95,25 @@
         </div>
     </div>
 
-        <script src="js/script.js"></script>
+
+    <div class="info-box">
+        <h2>Información Sobre W&DB</h2>
+
+        <p>
+        "Writed & Directed By" es el proyecto de final de grado de Juan Carlos Fernández González.
+            <br><br>
+            
+            Medios de contacto:<br>
+            
+            <i><b>Mail:</i></b> juancarfele@gmail.com <br>
+            <i><b>Discord:</i></b> Astur#0001 <br>
+            <i><b>GitHub:</i></b> <a href="https://github.com/JuanCAPlos">Perfil</a><br>
+            <i><b>Linkedin:</i></b> <a href="https://www.linkedin.com/in/juan-carlos-fernández-gonzález-52ab46250/">Perfil</a><br>
+        </p>
+        <p>¡¡DISFRUTEN DE LAS PELIS!! <3</p>
+    </div>
+
+        <script src="../js/script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
