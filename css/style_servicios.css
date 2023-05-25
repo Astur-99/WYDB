@@ -283,4 +283,23 @@ header {
    font-family: 'Poppins';
    font-size: 115%;
    text-align: center;
+   margin-top: -20%;
+   }
+
+.info-box p+p {
+    color: rgb(251, 255, 255);
+   position: absolute;
+   font-family: 'Poppins';
+   font-size: 115%;
+   text-align: left;
+   margin-top: 0%;
+   }
+
+.info-box p+p+p {
+    color: rgb(251, 255, 255);
+   position: absolute;
+   font-family: 'Poppins';
+   font-size: 115%;
+   text-align: center;
+   margin-top: 20%;
    }
