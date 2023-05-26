@@ -21,7 +21,7 @@ if (!$connection) {
 }
 
 // Consultas SQL para obtener los datos de las películas
-$query = "SELECT nombre, director, genero, ano, duracion, clasificacion, pais, sinopsis, reparto, imagen, trailer FROM peliculas";
+$query = "SELECT nombre, director, genero, ano, duracion, clasificacion, pais, sinopsis, reparto, imagen, trailer FROM peliculas WHERE nombre LIKE 'Pulp Fiction'";
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
@@ -40,7 +40,7 @@ mysqli_close($connection);
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Películas</title>
+    <title>Info</title>
     <style>
     
         h1 {
@@ -51,7 +51,7 @@ mysqli_close($connection);
         body {
           font-family: Arial, sans-serif;
           margin: 20px;
-          background-image: url('../sources/welcome_background.jpg');
+          background-image: url('../../sources/welcome_background.jpg');
           background-size: cover;
           background-position: center;
         }
@@ -76,6 +76,13 @@ mysqli_close($connection);
             background-color: #4CAF50;
             color: white;
         }
+                        
+        .image-container {
+            position: relative;
+            display: block;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -85,7 +92,7 @@ mysqli_close($connection);
             <th>Nombre</th>
             <th>Director</th>
             <th>Genero</th>
-            <th>Ano</th>
+            <th>Fecha de salida</th>
             <th>Duracion</th>
             <th>Clasificacion</th>
             <th>Pais</th>
@@ -105,26 +112,16 @@ mysqli_close($connection);
             <td><?php echo $dato['pais']; ?></td>
             <td><?php echo $dato['sinopsis']; ?></td>
             <td><?php echo $dato['reparto']; ?></td>
-            <td><img src="../sources/fotos_pelis/pulpfiction.jpg" alt="Imagen de la película" width="150"></td>
+            <td><img src="../../sources/fotos_pelis/pulpfiction.jpg" alt="Imagen de la película" width="150"></td>
 </td>
             <td><a href="<?php echo $dato['trailer']; ?>" target="_blank">Ver trailer</a></td>
-        </tr>
-      
-      /*<tr>
-            <td><?php echo $dato['nombre']; ?></td>
-            <td><?php echo $dato['director']; ?></td>
-            <td><?php echo $dato['genero']; ?></td>
-            <td><?php echo $dato['ano']; ?></td>
-            <td><?php echo $dato['duracion']; ?></td>
-            <td><?php echo $dato['clasificacion']; ?></td>
-            <td><?php echo $dato['pais']; ?></td>
-            <td><?php echo $dato['sinopsis']; ?></td>
-            <td><?php echo $dato['reparto']; ?></td>
-            <td><img src="../sources/fotos_pelis/pulpfiction.jpg" alt="Imagen de la película" width="150"></td>
-</td>
-            <td><a href="<?php echo $dato['trailer']; ?>" target="_blank">Ver trailer</a></td>
-        </tr>*/
+        </tr>        
         <?php endforeach; ?>
     </table>
+                    
+    <div class="image-container">
+        <img src="../../sources/ver.png" alt="Imagen" width="300" height="200" onclick="window.location.href='../../pelis/pulp_fiction.mp4'">
+    </div>
+
 </body>
 </html>

@@ -54,18 +54,21 @@
   <h1><?php echo utf8_encode('¡Disfruta de las pelis!'); ?></h1>
   <ul>
    <?php
-      header('Content-Type: text/html; charset=utf-8');
+header('Content-Type: text/html; charset=utf-8');
 
-      $directorio = '../pelis';
-      $archivos = scandir($directorio);
+$directorio = '../pelis';
+$archivos = scandir($directorio);
 
-      foreach ($archivos as $archivo) {
-        if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4') {
-          $rutaCompleta = $directorio . '/' . $archivo;
-          echo '<li><a href="' . $archivo . '">' . $archivo . '</a> <a href="./peli_info_request.php">| Info |</a> <a href="' . $rutaCompleta . '" download><button class="boton-descarga">Descargar</button></a></li>';
-        }
-      }
-    ?>
+foreach ($archivos as $archivo) {
+  if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4') {
+    $nombreArchivo = pathinfo($archivo, PATHINFO_FILENAME);
+    $rutaCompleta = $directorio . '/' . $archivo;
+echo '<li><a>' . $nombreArchivo . '</a> <a href="./pelis_info/info_' . pathinfo($archivo, PATHINFO_FILENAME) . '.php" style="padding: 5px 10px; background-color: #eaeaea; color: #333; text-decoration: none; border-radius: 4px;">Info</a> <a href="' . $rutaCompleta . '" download><button class="boton-descarga">Descargar</button></a></li>';
+
+
+  }
+}
+?>
   </ul>
 </body>
 </html>
