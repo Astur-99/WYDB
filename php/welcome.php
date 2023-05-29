@@ -51,7 +51,7 @@
   </style>
 </head>
 <body>
-  <h1><?php echo utf8_encode('¡Disfruta de las pelis!'); ?></h1>
+  <h1><?php echo utf8_encode('Disfruta de las pelis!'); ?></h1>
   <ul>
    <?php
 header('Content-Type: text/html; charset=utf-8');
@@ -63,11 +63,24 @@ foreach ($archivos as $archivo) {
   if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4') {
     $nombreArchivo = pathinfo($archivo, PATHINFO_FILENAME);
     $rutaCompleta = $directorio . '/' . $archivo;
-echo '<li><a>' . $nombreArchivo . '</a> <a href="./pelis_info/info_' . pathinfo($archivo, PATHINFO_FILENAME) . '.php" style="padding: 5px 10px; background-color: #eaeaea; color: #333; text-decoration: none; border-radius: 4px;">Info</a> <a href="' . $rutaCompleta . '" download><button class="boton-descarga">Descargar</button></a></li>';
 
+    // Obtener la ruta de la imagen
+    $rutaImagen = '../../sources/fotos_pelis/' . $nombreArchivo . '.jpg'; // Cambia './imagenes/' por la ruta de tus imágenes
 
+    // Imprimir la imagen junto al nombre del archivo
+    echo '<li style="display: flex; align-items: center;">';
+    echo '<div style="flex: 1; margin-right: 10px;">';
+    echo '<img src="' . $rutaImagen . '" alt="' . $nombreArchivo . '" style="max-width: 100px;">';
+    echo '</div>';
+    echo '<div style="flex: 2;">';
+    echo '<h3>' . $nombreArchivo . '</h3>';
+    echo '<a href="./pelis_info/info_' . $nombreArchivo . '.php" style="padding: 5px 10px; background-color: #eaeaea; color: #333; text-decoration: none; border-radius: 4px;">Info</a>';
+    echo '<a href="' . $rutaCompleta . '" download><button class="boton-descarga">Descargar</button></a>';
+    echo '</div>';
+    echo '</li>';
   }
 }
+
 ?>
   </ul>
 </body>

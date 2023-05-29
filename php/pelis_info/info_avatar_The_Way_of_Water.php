@@ -120,7 +120,7 @@ mysqli_close($connection);
     </table>
     
     <div class="image-container">
-        <img src="../../sources/ver.png" alt="Imagen" width="300" height="200" onclick="window.location.href='../../pelis/avatar_The_Way_of_Water.mp4'">
+        <img src="../../sources/ver.png" alt="Imagen" width="300" height="200" onclick="window.location.href='../../pelis/AVATAR_THE_WAY_OF_WATER.mp4'">
     </div>
     
 </body>
