@@ -64,10 +64,8 @@ foreach ($archivos as $archivo) {
     $nombreArchivo = pathinfo($archivo, PATHINFO_FILENAME);
     $rutaCompleta = $directorio . '/' . $archivo;
 
-    // Obtener la ruta de la imagen
-    $rutaImagen = '../../sources/fotos_pelis/' . $nombreArchivo . '.jpg'; // Cambia './imagenes/' por la ruta de tus imágenes
+    $rutaImagen = '../../sources/fotos_pelis/' . $nombreArchivo . '.jpg';
 
-    // Imprimir la imagen junto al nombre del archivo
     echo '<li style="display: flex; align-items: center;">';
     echo '<div style="flex: 1; margin-right: 10px;">';
     echo '<img src="' . $rutaImagen . '" alt="' . $nombreArchivo . '" style="max-width: 100px;">';
