@@ -21,7 +21,7 @@ if (!$connection) {
 }
 
 // Consultas SQL para obtener los datos de las películas
-$query = "SELECT nombre, director, genero, ano, duracion, clasificacion, pais, sinopsis, reparto, imagen, trailer FROM peliculas WHERE nombre LIKE 'Interestelar'";
+$query = "SELECT nombre, director, genero, ano, duracion, clasificacion, pais, sinopsis, reparto, imagen, trailer FROM peliculas WHERE nombre LIKE 'Kill Bill Vol.2'";
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
@@ -34,7 +34,6 @@ $datos = mysqli_fetch_all($result, MYSQLI_ASSOC);
 // Cerrar la conexión
 mysqli_close($connection);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,18 +41,17 @@ mysqli_close($connection);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Info</title>
     <style>
-    
         h1 {
-          text-align: center;
-          color: white;
+            text-align: center;
+            color: white;
         }
         
         body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-          background-image: url('../../sources/welcome_background.jpg');
-          background-size: cover;
-          background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('../../sources/welcome_background.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         table {
@@ -71,11 +69,10 @@ mysqli_close($connection);
             background-color: rgba(242, 242, 242, 0.7);
         }
 
-
         th {
             background-color: #4CAF50;
             color: white;
-        }       
+        }
 
         .image-container {
             position: relative;
@@ -87,7 +84,6 @@ mysqli_close($connection);
             text-align: center;
             margin-top: 20px;
         }
-
 
     </style>
 </head>
@@ -106,6 +102,7 @@ mysqli_close($connection);
             <th>Reparto</th>
             <th>Imagen</th>
             <th>Trailer</th>
+        </tr>
         <?php foreach ($datos as $dato): ?>
         <tr>
             <td><?php echo $dato['nombre']; ?></td>
@@ -117,8 +114,7 @@ mysqli_close($connection);
             <td><?php echo $dato['pais']; ?></td>
             <td><?php echo $dato['sinopsis']; ?></td>
             <td><?php echo $dato['reparto']; ?></td>
-            <td><img src="../../sources/fotos_pelis/INTERESTELAR.jpg" alt="Imagen de la película" width="150"></td>
-</td>
+            <td><img src="../../sources/fotos_pelis/KILL_BILL_2.jpg" alt="Imagen de la película" width="150"></td>
             <td><a href="<?php echo $dato['trailer']; ?>" target="_blank">Ver trailer</a></td>
         </tr>        
         <?php endforeach; ?>
@@ -126,7 +122,7 @@ mysqli_close($connection);
 
     <div class="video-container">
         <video controls width="640" height="360">
-            <source src="../../pelis/INTERESTELAR.mp4" type="video/mp4">
+            <source src="../../pelis/BILL_BILL_2.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
     </div>

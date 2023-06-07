@@ -76,12 +76,18 @@ mysqli_close($connection);
             background-color: #4CAF50;
             color: white;
         }
-        
+
         .image-container {
             position: relative;
             display: block;
             text-align: center;
         }
+
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         
     </style>
 </head>
@@ -112,15 +118,18 @@ mysqli_close($connection);
             <td><?php echo $dato['pais']; ?></td>
             <td><?php echo $dato['sinopsis']; ?></td>
             <td><?php echo $dato['reparto']; ?></td>
-            <td><img src="../../sources/fotos_pelis/jackass_forever.jpg" alt="Imagen de la película" width="150"></td>
+            <td><img src="../../sources/fotos_pelis/JACKASS_FOREVER.jpg" alt="Imagen de la película" width="150"></td>
 </td>
             <td><a href="<?php echo $dato['trailer']; ?>" target="_blank">Ver trailer</a></td>
         </tr>        
         <?php endforeach; ?>
     </table>
-        
-    <div class="image-container">
-        <img src="../../sources/ver.png" alt="Imagen" width="300" height="200" onclick="window.location.href='../../pelis/JACKASS_FOREVER.mp4'">
+
+    <div class="video-container">
+        <video controls width="640" height="360">
+            <source src="../../pelis/JACKASS_FOREVER.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
     </div>
     
 </body>

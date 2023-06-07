@@ -60,7 +60,7 @@ $directorio = '../pelis';
 $archivos = scandir($directorio);
 
 foreach ($archivos as $archivo) {
-  if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4') {
+  if ($archivo !== '.' && $archivo !== '..' && pathinfo($archivo, PATHINFO_EXTENSION) === 'mp4')  {
     $nombreArchivo = pathinfo($archivo, PATHINFO_FILENAME);
     $rutaCompleta = $directorio . '/' . $archivo;
 

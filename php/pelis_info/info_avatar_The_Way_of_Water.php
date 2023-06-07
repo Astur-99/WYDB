@@ -34,7 +34,6 @@ $datos = mysqli_fetch_all($result, MYSQLI_ASSOC);
 // Cerrar la conexión
 mysqli_close($connection);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,18 +41,17 @@ mysqli_close($connection);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Info</title>
     <style>
-    
         h1 {
-          text-align: center;
-          color: white;
+            text-align: center;
+            color: white;
         }
         
         body {
-          font-family: Arial, sans-serif;
-          margin: 20px;
-          background-image: url('../../sources/welcome_background.jpg');
-          background-size: cover;
-          background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('../../sources/welcome_background.jpg');
+            background-size: cover;
+            background-position: center;
         }
         
         table {
@@ -71,7 +69,6 @@ mysqli_close($connection);
             background-color: rgba(242, 242, 242, 0.7);
         }
 
-
         th {
             background-color: #4CAF50;
             color: white;
@@ -82,7 +79,12 @@ mysqli_close($connection);
             display: block;
             text-align: center;
         }
-        
+
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -112,15 +114,17 @@ mysqli_close($connection);
             <td><?php echo $dato['pais']; ?></td>
             <td><?php echo $dato['sinopsis']; ?></td>
             <td><?php echo $dato['reparto']; ?></td>
-            <td><img src="../../sources/fotos_pelis/avatar2.jpg" alt="Imagen de la película" width="150"></td>
-</td>
+            <td><img src="../../sources/fotos_pelis/AVATAR_THE_WAY_OF_WATER.jpg" alt="Imagen de la película" width="150"></td>
             <td><a href="<?php echo $dato['trailer']; ?>" target="_blank">Ver trailer</a></td>
         </tr>        
         <?php endforeach; ?>
     </table>
-    
-    <div class="image-container">
-        <img src="../../sources/ver.png" alt="Imagen" width="300" height="200" onclick="window.location.href='../../pelis/AVATAR_THE_WAY_OF_WATER.mp4'">
+
+    <div class="video-container">
+        <video controls width="640" height="360">
+            <source src="../../pelis/AVATAR_THE_WAY_OF_WATER.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
     </div>
     
 </body>
